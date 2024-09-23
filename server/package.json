@@ -6,10 +6,8 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test node --test",
     "start": "cross-env NODE_ENV=production node index.js",
-    "setup-git": "git config --global user.email 'ferbroine.234@gmail.com' && git config --global user.name 'thecrusher2345'",
     "dev": "cross-env NODE_ENV=development nodemon index.js",
-    "build:ui": "rm -rf dist && cd ../contacts && npm install && npm run build && cp -r dist ../server && cd ../server",
-    "deploy:full": "npm run build:ui && npm run setup-git && git checkout master && git pull origin master --allow-unrelated-histories && git add . && git commit -m 'deploy' && git push origin master"
+    "build:ui": "rm -rf dist && cd ../contacts && npm install && npm run build && cp -r dist ../server && cd ../server"
   },
   "author": "",
   "license": "ISC",
