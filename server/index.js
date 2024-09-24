@@ -13,6 +13,7 @@ import { errorHandler, unknownEndpoint } from './middelware.js'
 
 
 const app = express();
+app.use(express.static('dist'))
 app.use(cors())
 app.use(json());
 
@@ -26,6 +27,8 @@ app.use(morgan(customFormat));
 app.get('/', (req, res)=>{
     res.send('<h1>Hello World!</h1>')
 })
+
+
 
 
 
